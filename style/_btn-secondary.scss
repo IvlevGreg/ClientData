@@ -1,0 +1,33 @@
+@import "vars";
+@import "mixins";
+
+.btn-secondary {
+  
+  &:hover {
+    background-color: $btn-hover;
+    color: $tc-btn;
+  }
+  &:hover path{
+    fill: $tc-btn
+  }
+
+ 
+  &:focus:not(:active):not(:hover) {
+    outline: 1px solid $btn-focus;
+    background-color: transparent;
+    color: $border-table;
+  }
+  
+  &:focus:not(:active):not(:hover) path{
+    fill: $btn-focus;
+  }
+
+  &:active {
+    background-color: $btn-active;
+    color: $tc-btn;
+  }
+  &:active path{
+    fill: $tc-btn;
+  }
+}
+

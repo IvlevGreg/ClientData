@@ -1,0 +1,211 @@
+@import "vars";
+@import "mixins";
+
+.form-modal {
+  &__label {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  &__label-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    @include font(14px, 19px);
+    transition: transform 0.1s ease;
+  }
+
+  &__label-title_up {
+    @include font(10px, 14px);
+    transform: translateY(-20px);
+  }
+
+  &__input {
+    padding: 0;
+    width: 100%;
+    border: none;
+    background: transparent;
+    @include font(14px, 19px, 600);
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__input_name {
+    padding-bottom: 5px;
+    box-shadow: 0px -1px 0px 0px $border-table inset;
+    transition: box-shadow .3s ease;
+
+    &:focus {
+      box-shadow: 0px -1px 0px 0px $btn-delete inset; 
+    }
+  }
+
+  &__input_contact {
+    padding: 0 12px;
+    border: 1px solid $border-modal-add;
+    border-left: none;
+    border-right: none;
+  }
+
+  &__error-message {
+  }
+
+  &__add-container {
+    margin: 0 -30px 25px -30px;
+    padding: 25px 30px;
+    background-color: $bс-modal-secondary;
+  }
+
+  &__add-container::after {
+  }
+
+  &__add-btn {
+    
+    transition: opacity 0.7s ease, color 0.3s ease;
+    @include font(14px, 19px, 600);
+
+    g {
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    svg path {
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $tc-additional;
+    }
+
+
+    &:hover g,
+    &:focus g,
+    &:active g {
+      opacity: 1;
+    }
+
+    &:hover svg > path,
+    &:focus svg > path,
+    &:active svg > path {
+      opacity: 0;
+    }
+  }
+
+  &__add-btn path {
+    transition: fill 0.2s ease;
+  }
+
+  &__add-btn:disabled {
+    cursor: auto;
+  }
+
+  &__add-btn:disabled path {
+    fill: #b0b0b0;
+  }
+
+  &__save-btn {
+    
+  }
+
+  &__cancel {
+   
+    text-decoration: underline;
+    @include font(12px, 16px);
+    transition: color 0.3s ease;
+
+    &:hover,
+    &:focus{
+      color: $tc-additional;
+    }
+
+    &:active {
+      color: darken($tc-additional, 20%);
+    }
+  }
+
+  &__delete-contact {
+    display: flex;
+    justify-content: center;
+    width: 45px;
+    align-items: center;
+    border: 1px solid $border-modal-add;
+    transition: border 0.3s ease;
+    // border-left: none;
+
+    
+    &:hover,
+    &:focus {
+      border: 1px solid $btn-delete;
+    }
+
+    &:active {
+      border: 1px solid darken($btn-delete, 15%);
+    }
+
+    &:hover path,
+    &:focus path{
+      fill: $btn-delete;
+    }
+
+    &:active path {
+      fill: darken($btn-delete, 15%) ;
+    }
+  }
+
+  // &__delete-contact svg {
+  //   opacity: 0;
+  //   transition: opacity .3s ease;
+  // }
+
+  // &__delete-contact--active svg {
+  //   opacity: 1;
+  // }
+
+  &__save-error {
+    display: none;
+    color: $tc-delete;
+    @include font(13px, 13px);
+    text-align: center;
+    margin-bottom: 9px;
+  }
+
+  &__save-error--active {
+    display: block;
+  }
+
+  &__add-contact {
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  &__add-contact:last-child {
+    margin-bottom: 25px;
+  }
+
+  &__select {
+    border: none;
+    background: none;
+    background-color: aqua;
+    width: 100%;
+
+    &:active {
+      outline: none;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  &__option {
+    background-color: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

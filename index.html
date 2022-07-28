@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="css/style.min.css" rel="stylesheet">
+
+  <link href="img/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
+  <link type="image/png" href="img/favicon/favicon-32x32.png" rel="icon" sizes="32x32">
+  <link type="image/png" href="img/favicon/favicon-16x16.png" rel="icon" sizes="16x16">
+  <link href="img/favicon/site.webmanifest" rel="manifest">
+  <link href="img/favicon/safari-pinned-tab.svg" rel="mask-icon" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <script src="js/create-elements.js" type="module" defer></script>
+  <!-- <script defer type="module" src="js/select.js"></script> -->
+  <script src="js/create-contact.js" type="module" defer></script>
+  <script src="js/main.js" type="module" defer></script>
+
+  <title>Document</title>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container header__container">
+      <a class="header__logo">
+        <img class="header__logo-img" src="img/header/logo.svg" alt>
+      </a>
+      <form class="search-form" action>
+        <input id="search-input" class="search-form__input" type="text" placeholder="Введите запрос">
+      </form>
+    </div>
+  </header>
+
+  <main>
+    <section class="clients">
+      <div class="container clients__container">
+        <h2 class="clients__title">Клиенты</h2>
+        <div class="div">
+          <table id="table" class="clients__table table" cellspacing="0" cellpadding="0">
+            <thead>
+              <tr class="table__row table__row_title">
+                <th class="table__col table__col_title">
+                  <button class="btn table__btn table__btn_title table__btn--active txt-secondary js-sort-btn"
+                    data-sort="id">
+                    ID
+                    <svg class="table__sort-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10 6L9.295 5.295L6.5 8.085L6.5 2H5.5L5.5 8.085L2.71 5.29L2 6L6 10L10 6Z" fill="#9873FF">
+                      </path>
+                    </svg>
+
+                  </button>
+                </th>
+                <th class="table__col table__col_title">
+                  <button class="btn table__btn table__btn_title txt-secondary js-sort-btn" data-sort="surname">
+                    Фамилия Имя Отчество
+
+                    <svg class="table__sort-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10 6L9.295 5.295L6.5 8.085L6.5 2H5.5L5.5 8.085L2.71 5.29L2 6L6 10L10 6Z" fill="#9873FF">
+                      </path>
+                    </svg>
+                    <span class="txt-additional table__sort-text"></span>
+                  </button>
+                </th>
+                <th class="table__col table__col_title">
+                  <button class="btn table__btn table__btn_title txt-secondary js-sort-btn" data-sort="createdAt">
+                    Дата и время создания
+                    <svg class="table__sort-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10 6L9.295 5.295L6.5 8.085L6.5 2H5.5L5.5 8.085L2.71 5.29L2 6L6 10L10 6Z" fill="#9873FF">
+                      </path>
+                    </svg>
+                  </button>
+                </th>
+                <th class="table__col table__col_title">
+                  <button class="btn table__btn table__btn_title txt-secondary js-sort-btn" data-sort="updatedAt">
+                    Последние изменения
+                    <svg class="table__sort-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10 6L9.295 5.295L6.5 8.085L6.5 2H5.5L5.5 8.085L2.71 5.29L2 6L6 10L10 6Z" fill="#9873FF">
+                      </path>
+                    </svg>
+                  </button>
+                </th>
+                <th class="table__col table__col_title txt-secondary">
+                  Контакты
+                </th>
+                <th class="table__col table__col_title txt-secondary">
+                  Действия
+                </th>
+                <!-- <th class="table__col table__col_title txt-secondary">
+              </th> -->
+              </tr> <!-- title -->
+            </thead>
+
+            <tfoot id="table-foot" class="table__foot">
+              <tr class="table__row table__row_loading">
+                <td class="table__column table__column_loading" colspan="7">
+                  <img class="table__img-loading" src="img/clients/loading.svg" alt>
+                </td>
+              </tr>
+
+              <tr class="table__row table__row_error">
+                <td id="table-text-error" class="table__column table__column_error" colspan="7">
+                </td>
+              </tr>
+            </tfoot>
+            <tbody id="table-body" class="table__body">
+            </tbody>
+
+          </table>
+        </div>
+        <button id="add-btn" class="btn btn-secondary clients__btn-client-add txt-additional">
+          <svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M14.5 8C16.71 8 18.5 6.21 18.5 4C18.5 1.79 16.71 0 14.5 0C12.29 0 10.5 1.79 10.5 4C10.5 6.21 12.29 8 14.5 8ZM5.5 6V3H3.5V6H0.5V8H3.5V11H5.5V8H8.5V6H5.5ZM14.5 10C11.83 10 6.5 11.34 6.5 14V16H22.5V14C22.5 11.34 17.17 10 14.5 10Z"
+              fill="#9873FF" />
+          </svg>
+          Добавить клиента
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- модальное окно создания и изменения -->
+  <div id="modal-data" class="modal-data">
+    <div class="modal-data__container">
+      <h3 class="modal-data__title modal-data__title_modify">Изменить данные</h3>
+      <h3 class="modal-data__title modal-data__title_add">Новый клиент</h3>
+      <span class="modal-data__id txt-secondary">ID:</span>
+      <span id="client-id" class="modal-data__id txt-secondary"></span>
+      <button id="modal-data-close" class="btn modal-data__close-btn close-btn"></button>
+      <form id="form-modal" class="form-modal" action>
+        <label class="form-modal__label" for>
+          <div class="form-modal__error-message"></div>
+          <input class="form-modal__input form-modal__input_name" name="surname" type="text">
+          <div class="form-modal__label-title form-modal__label-title_up txt-secondary">
+            <span class="">
+              Фамилия
+            </span>
+            <span class="txt-additional">*</span>
+          </div>
+        </label>
+        <label class="form-modal__label" for>
+          <div class="form-modal__error-message"></div>
+          <input class="form-modal__input form-modal__input_name" name="name" type="text">
+          <div class="form-modal__label-title form-modal__label-title_up txt-secondary">
+            <span class="">
+              Имя
+            </span>
+            <span class="txt-additional">*</span>
+          </div>
+        </label>
+        <label class="form-modal__label" for>
+          <div class="form-modal__error-message"></div>
+          <input class="form-modal__input form-modal__input_name" name="lastName" type="text">
+          <div class="form-modal__label-title form-modal__label-title_up txt-secondary">Отчество</div>
+        </label>
+        <div class="form-modal__add-container">
+          <ul id="contact-list" class="form-modal__contact-list">
+
+          </ul>
+          <button id="add-contact-btn" class="btn block-center form-modal__add-btn" type="button">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+              <path
+                d="M7.00001 3.66665C6.63334 3.66665 6.33334 3.96665 6.33334 4.33331V6.33331H4.33334C3.96668 6.33331 3.66668 6.63331 3.66668 6.99998C3.66668 7.36665 3.96668 7.66665 4.33334 7.66665H6.33334V9.66665C6.33334 10.0333 6.63334 10.3333 7.00001 10.3333C7.36668 10.3333 7.66668 10.0333 7.66668 9.66665V7.66665H9.66668C10.0333 7.66665 10.3333 7.36665 10.3333 6.99998C10.3333 6.63331 10.0333 6.33331 9.66668 6.33331H7.66668V4.33331C7.66668 3.96665 7.36668 3.66665 7.00001 3.66665ZM7.00001 0.333313C3.32001 0.333313 0.333344 3.31998 0.333344 6.99998C0.333344 10.68 3.32001 13.6666 7.00001 13.6666C10.68 13.6666 13.6667 10.68 13.6667 6.99998C13.6667 3.31998 10.68 0.333313 7.00001 0.333313ZM7.00001 12.3333C4.06001 12.3333 1.66668 9.93998 1.66668 6.99998C1.66668 4.05998 4.06001 1.66665 7.00001 1.66665C9.94001 1.66665 12.3333 4.05998 12.3333 6.99998C12.3333 9.93998 9.94001 12.3333 7.00001 12.3333Z"
+                fill="#9873FF"></path>
+              <g>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.333313 7.00016C0.333313 3.32016 3.31998 0.333496 6.99998 0.333496C10.68 0.333496 13.6666 3.32016 13.6666 7.00016C13.6666 10.6802 10.68 13.6668 6.99998 13.6668C3.31998 13.6668 0.333313 10.6802 0.333313 7.00016ZM6.33329 4.33366C6.33329 3.96699 6.63329 3.66699 6.99996 3.66699C7.36663 3.66699 7.66663 3.96699 7.66663 4.33366V6.33366H9.66663C10.0333 6.33366 10.3333 6.63366 10.3333 7.00033C10.3333 7.36699 10.0333 7.66699 9.66663 7.66699H7.66663V9.66699C7.66663 10.0337 7.36663 10.3337 6.99996 10.3337C6.63329 10.3337 6.33329 10.0337 6.33329 9.66699V7.66699H4.33329C3.96663 7.66699 3.66663 7.36699 3.66663 7.00033C3.66663 6.63366 3.96663 6.33366 4.33329 6.33366H6.33329V4.33366Z"
+                  fill="#9873FF" />
+              </g>
+            </svg>
+            Добавить контакт
+          </button>
+        </div>
+        <ul class="form-modal__save-error">Упс! Что-то пошло не так:</ul>
+        <button id="btn-client-save" class="btn block-center form-modal__save-btn btn-primary"
+          type="submit">Сохранить</button>
+        <button id="btn-client-delete" class="btn block-center form-modal__cancel form-modal__cancel_modify"
+          type="button">Удалить клиента</button>
+        <button id="cancel-btn" class="btn block-center form-modal__cancel form-modal__cancel_add" type="button">Отмена
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div id="modal-data-delete" class="modal-data">
+    <div class="modal-data__container modal-data__container_delete">
+      <h3 class="text-center modal-data__title modal-data__title_modify modal-data__title_mb">Удалить клиента</h3>
+      <ul id="error-container-delete" class="form-modal__save-error">Упс! Что-то пошло не так:</ul>
+      <button id="modal-data-close-delete" class="btn modal-data__close-btn close-btn"></button>
+      <p class="text-center modal-data__text">
+        Вы действительно хотите удалить данного клиента?
+      </p>
+      <button id="approve-btn-delete" class="btn block-center form-modal__delete btn-primary">Удалить</button>
+      <button id="cancel-btn-delete" class="btn block-center form-modal__cancel form-modal__cancel_add"
+        type="button">Отмена </button>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
