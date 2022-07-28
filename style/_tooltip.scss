@@ -1,0 +1,50 @@
+@import "vars";
+@import "mixins";
+
+.tooltip {
+  position: relative;
+  cursor: pointer;
+  
+  &:hover path,
+  &:focus,
+  &:focus path {
+    fill: $btn-active;
+    outline: none;
+  }
+
+  
+
+  &:hover .tooltip__text,
+  &:focus .tooltip__text{
+    display: block;
+    
+  }
+
+  &__text {
+    position: absolute;
+    padding: 7px 14px;
+    //top: calc(-5px - 100%);
+    top: -11px;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    display: none;
+    background-color: $bc-tooltip;
+    color: $tc-tooltip;
+    white-space:nowrap;
+    @include font(12px, 16px, 700);
+  }
+
+  &__text_close {
+    transform: translate(-50%, -75%);
+  }
+
+  &__text::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    border: 7px solid transparent; 
+    border-top: 7px solid $bc-tooltip;
+  }
+}

@@ -1,0 +1,36 @@
+@import "vars";
+@import "mixins";
+
+.btn-primary {
+    padding: 12.5px 35px;
+    margin: 0 auto 5px auto;
+    
+    background: $btn-color;
+    color: $tc-btn;
+    @include font(14px, 19px, 600);
+
+  &:hover {
+    background-color: $btn-hover;
+    outline-color: $btn-hover;
+    color: $tc-btn;
+  }
+  &:hover path,
+  &:focus:not(:active):not(:hover) path{
+    fill: $tc-btn;
+  }
+  &:focus:not(:active):not(:hover) {
+    outline-color: $btn-focus;
+    background-color: $border-table;
+    color: $tc-btn;
+  }
+  &:active {
+    background-color: $btn-active;
+    outline-color: $btn-active;
+    color: $tc-btn;
+
+    
+  }
+  &:active path{
+    fill: $tc-btn;
+  }
+}

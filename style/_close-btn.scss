@@ -1,0 +1,29 @@
+@import "vars";
+@import "mixins";
+
+.close-btn {
+  width: 22px;
+  height: 22px;
+  opacity: 0.3;
+  transition: opacity .3s ease;
+}
+.close-btn:hover {
+  opacity: 1;
+}
+.close-btn:before, .close-btn:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  content: ' ';
+  height: 23px;
+  width: 2px;
+  background-color: rgba(200, 197, 209, 1);
+}
+.close-btn:before {
+  transform:  translateX(11px) rotate(45deg);
+}
+.close-btn:after {
+  transform: translateX(11px) rotate(-45deg);
+}

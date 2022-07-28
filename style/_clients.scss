@@ -1,0 +1,37 @@
+@import "vars";
+@import "mixins";
+
+.clients {
+  &__container {
+    padding: 40px 90px;
+
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $xl) {
+      padding: 40px 20px;
+    }
+  }
+  &__table {
+  }
+  &__title {
+    margin-bottom: 32px;
+    padding: 0 90px;
+  }
+  &__btn-client-add {
+    display: block;
+    margin: auto;
+    padding: 12.5px 26.5px;
+    outline: 1px solid $btn-color;
+  }
+}
+
+// @keyframes opacity {
+//   0% {
+//     opacity: 0;
+//   }
+
+//   100% {
+//     opacity: 1;
+//   }
+// }

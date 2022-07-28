@@ -1,0 +1,76 @@
+@import "vars";
+@import "mixins";
+
+.modal-data {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $bc-modal-body;
+  // width: max-content;
+  // height: max-content;
+
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  &_add .modal-data__id,
+  &_add .modal-data__title_modify,
+  &_add .form-modal__cancel_modify{
+  display: none;    
+  }
+
+  &_modify .modal-data__title_add,
+  &_modify .form-modal__cancel_add{
+  display: none;    
+  }
+
+
+  &--active {
+    display: block;
+  }
+  &__container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 390px;
+    padding: 25px 30px;
+
+    background-color: $bc-modal;
+  }
+
+  &__container_delete {
+    width: 330px;
+    padding: 25px 60px;
+  }
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 35px;
+    margin-right: 5px;
+    @include font(18px, 25px, 700);
+  }
+
+  &__title_mb {
+    margin-bottom: 11px;
+  }
+
+  &__text{
+    margin-bottom: 25px;
+    @include font(14px, 19px);
+  }
+
+  &__id {
+    @include font(12px, 16px);
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
+
