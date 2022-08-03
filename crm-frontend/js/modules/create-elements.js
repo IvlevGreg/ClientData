@@ -1,25 +1,3 @@
-let testObjj = {
-  id: '1234567890',
-  createdAt: '2021-02-03T13:07:29.554Z',
-  updatedAt: '2021-12-03T00:15:09.554Z',
-  name: 'Василий',
-  surname: 'Пупкин',
-  lastName: 'Васильевич',
-  contacts: [
-    {
-      type: 'Телефон',
-      value: '+71234567890'
-    },
-    {
-      type: 'Email',
-      value: 'abc@xyz.com'
-    },
-    {
-      type: 'Facebook',
-      value: 'https://facebook.com/vasiliy-pupkin-the-best'
-    }
-  ]
-}
 
 function createElement(parent, tag, classes = 0, text = 0) {
   const el = document.createElement(tag);
