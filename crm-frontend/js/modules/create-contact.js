@@ -1,4 +1,4 @@
-import selectListener from './modules/select.js'
+import selectListener from './select.js'
 
 const contactList = document.getElementById('contact-list')
 const addContactBtn = document.getElementById('add-contact-btn')
