@@ -34,6 +34,8 @@ export function fillModifyForm(
       obj[inputName];
   });
 
+  formModal.querySelector('input').focus();
+
   document.getElementById('btn-client-delete').addEventListener('click', () => {
     listenApproveDeleteModal(obj);
     closeModalData(formModal, modalData, listenApproveDeleteModal);
