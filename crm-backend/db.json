@@ -1,0 +1,166 @@
+[
+  {
+    "name": "Григорий",
+    "surname": "Ивлев",
+    "lastName": "Сергеевич",
+    "contacts": [
+      { "type": "Телефон", "value": "+7906049965" },
+      { "type": "Email", "value": "igs@bk.ru" },
+      { "type": "Facebook", "value": "@greg" },
+      { "type": "VK", "value": "@igsMan" },
+      { "type": "Другое", "value": "+79995849821" }
+    ],
+    "id": "1673942807866",
+    "updatedAt": "2023-01-17T08:34:41.446Z",
+    "createdAt": "2023-01-17T08:06:47.866Z"
+  },
+  {
+    "name": "Иван",
+    "surname": "Иванов",
+    "lastName": "Иванович",
+    "contacts": [
+      { "type": "Телефон", "value": "+790604999865" },
+      { "type": "Email", "value": "ivas@mail.ru" },
+      { "type": "Facebook", "value": "valina23" }
+    ],
+    "id": "1673942873310",
+    "updatedAt": "2023-01-17T08:10:39.671Z",
+    "createdAt": "2023-01-17T08:07:53.310Z"
+  },
+  {
+    "name": "Петр",
+    "surname": "Петров",
+    "lastName": "Петрович",
+    "contacts": [
+      { "type": "Телефон", "value": "+790604199865" },
+      { "type": "Email", "value": "petr@mail.ru" },
+      { "type": "VK", "value": "vasilok" }
+    ],
+    "id": "1673942885589",
+    "updatedAt": "2023-01-17T08:36:32.937Z",
+    "createdAt": "2023-01-17T08:08:05.589Z"
+  },
+  {
+    "name": "Сергей",
+    "surname": "Сергеев",
+    "lastName": "Сергеевич",
+    "contacts": [
+      { "type": "Телефон", "value": "+790604999865" },
+      { "type": "Email", "value": "ser@mail.ru" },
+      { "type": "VK", "value": "serega97" },
+      { "type": "Facebook", "value": "serega98" }
+    ],
+    "id": "1673942900637",
+    "updatedAt": "2023-01-17T09:22:20.308Z",
+    "createdAt": "2023-01-17T08:08:20.637Z"
+  },
+  {
+    "name": "Алена",
+    "surname": "Пушкина",
+    "lastName": "Сергеевна",
+    "contacts": [
+      { "type": "Телефон", "value": "+792604999865" },
+      { "type": "Email", "value": "pus@mail.ru" },
+      { "type": "VK", "value": "push298" }
+    ],
+    "id": "1673942913211",
+    "updatedAt": "2023-01-17T08:11:08.397Z",
+    "createdAt": "2023-01-17T08:08:33.211Z"
+  },
+  {
+    "name": "Лариса",
+    "surname": "Валина",
+    "lastName": "Олеговна",
+    "contacts": [
+      { "type": "Телефон", "value": "+793204999865" },
+      { "type": "Email", "value": "val@mail.ru" }
+    ],
+    "id": "1673942945437",
+    "updatedAt": "2023-01-17T08:11:19.884Z",
+    "createdAt": "2023-01-17T08:09:05.437Z"
+  },
+  {
+    "name": "Алексей",
+    "surname": "Синицин",
+    "lastName": "Петрович",
+    "contacts": [
+      { "type": "Телефон", "value": "+79060499725" },
+      { "type": "Email", "value": "sinic@yandex.ru" }
+    ],
+    "id": "1673943461862",
+    "updatedAt": "2023-01-17T08:17:41.862Z",
+    "createdAt": "2023-01-17T08:17:41.862Z"
+  },
+  {
+    "name": "Петр",
+    "surname": "Савин",
+    "lastName": "Васильевич",
+    "contacts": [
+      { "type": "Email", "value": "sinic@yandex.ru" },
+      { "type": "Телефон", "value": "+79060499872" }
+    ],
+    "id": "1673943486749",
+    "updatedAt": "2023-01-17T10:21:54.630Z",
+    "createdAt": "2023-01-17T08:18:06.749Z"
+  },
+  {
+    "name": "Василий",
+    "surname": "Зависин",
+    "lastName": "Васильевич",
+    "contacts": [
+      { "type": "VK", "value": "zava23" },
+      { "type": "Facebook", "value": "vasz23" }
+    ],
+    "id": "1673943522557",
+    "updatedAt": "2023-01-17T08:18:42.557Z",
+    "createdAt": "2023-01-17T08:18:42.557Z"
+  },
+  {
+    "name": "Федор",
+    "surname": "Пупкин",
+    "lastName": "",
+    "contacts": [
+      { "type": "Телефон", "value": "+79998719236" },
+      { "type": "Email", "value": "pupok@list.ru" }
+    ],
+    "id": "1673944235118",
+    "updatedAt": "2023-01-17T08:32:53.720Z",
+    "createdAt": "2023-01-17T08:30:35.118Z"
+  },
+  {
+    "name": "Василиса",
+    "surname": "Иванова",
+    "lastName": "Витальевна",
+    "contacts": [
+      { "type": "Email", "value": "vasek@mail.ru" },
+      { "type": "Facebook", "value": "vasek82" }
+    ],
+    "id": "1673944269961",
+    "updatedAt": "2023-01-17T08:31:09.961Z",
+    "createdAt": "2023-01-17T08:31:09.961Z"
+  },
+  {
+    "name": "Филипп",
+    "surname": "Пасечник",
+    "lastName": "",
+    "contacts": [
+      { "type": "Телефон", "value": "+795487654" },
+      { "type": "Email", "value": "pasr@mail.ru" }
+    ],
+    "id": "1673944624575",
+    "updatedAt": "2023-01-17T09:18:03.193Z",
+    "createdAt": "2023-01-17T08:37:04.575Z"
+  },
+  {
+    "name": "Сергей",
+    "surname": "Иванов",
+    "lastName": "Сергеевич",
+    "contacts": [
+      { "type": "Телефон", "value": "+7905854254" },
+      { "type": "Email", "value": "serega22@mail.ru" }
+    ],
+    "id": "1673947377015",
+    "updatedAt": "2023-01-17T10:30:09.918Z",
+    "createdAt": "2023-01-17T09:22:57.015Z"
+  }
+]
