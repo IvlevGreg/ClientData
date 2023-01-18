@@ -7,6 +7,8 @@ export function searchData(
   listenApproveDeleteModal
 ) {
   const searchData = data.slice();
+  const searchValue = searchInput.value.toLowerCase().trim();
+
   setTimeout(() => {
     for (let i = 0; i < searchData.length; i) {
       const propertyArray = ['id', 'name', 'surname', 'lastName'];
@@ -15,7 +17,6 @@ export function searchData(
       //функция проверки на совподение текста запроса и данных клиента
       function isInclude(arrayIndex) {
         const clientsValue = e[propertyArray[arrayIndex]].toLowerCase();
-        const searchValue = searchInput.value.toLowerCase();
         return clientsValue.includes(searchValue);
       }
       if (isInclude(0) || isInclude(1) || isInclude(2) || isInclude(3)) {
