@@ -24,7 +24,7 @@ export function searchData(
         searchData.splice(i, 1);
       }
     }
-    if (searchData.length === 0) {
+    if (searchData.length === 0 && searchValue.length > 0) {
       tableFoot.classList.add('table__foot_error');
       document.getElementById(
         'table-text-error'
