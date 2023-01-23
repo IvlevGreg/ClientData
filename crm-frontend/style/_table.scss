@@ -164,7 +164,6 @@
   &__btn-text {
     width: max-content;
     margin-right: 2px;
-    
   }
 
   &__date {
@@ -198,7 +197,7 @@
     border: 1px solid $tc-additional;
     border-radius: 50%;
     background-color: $bc-table;
-    transition: color .3s ease, background-color .3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease;
     @include font(8px, 10px, 600);
   }
 
@@ -212,7 +211,7 @@
     &:focus {
       background-color: $tc-additional;
       border-radius: 50%;
-      
+
       color: $tc-btn;
     }
   }
