@@ -2,11 +2,15 @@
 @import "mixins";
 
 .table {
-  margin: 0 auto;
   margin-bottom: 40px;
-  width: calc(100%  - 40px);
+  width: calc(100% - 80px);
+
   max-width: 1400px;
   min-width: 700px;
+
+  @media (max-width: $xl) {
+    width: calc(100% - 40px);
+  }
   //table-layout: fixed;
 
   &__body {
@@ -35,6 +39,13 @@
 
     @media (max-width: $lg) {
       padding: 0 9px;
+
+      &:first-child {
+        max-width: 50px;
+        white-space: nowrap; /* Текст не переносится */
+        overflow: hidden; /* Обрезаем всё за пределами блока */
+        text-overflow: ellipsis; /* Добавляем многоточие */
+      }
     }
   }
 
@@ -42,7 +53,10 @@
     padding-bottom: 8px;
     text-align: left;
     @include font(12px, 16px);
-    
+
+    @media (max-width: $md) {
+      @include font(10px, 14px);
+    }
   }
 
   &__col_text-sm {
@@ -98,13 +112,15 @@
     gap: 5px 30px;
 
     @media (max-width: $md) {
-      flex-wrap: wrap;
-      gap: 5px 0px;
+      display: block;
     }
   }
 
   &__btn_modify {
-    
+    @media (max-width: $md) {
+      margin-bottom: 5px;
+    }
+
     &:hover,
     &:active,
     &:focus {
@@ -170,6 +186,7 @@
     margin-right: 5px;
 
     @media (max-width: $md) {
+      margin-right: 0px;
       display: block;
       width: max-content;
     }
