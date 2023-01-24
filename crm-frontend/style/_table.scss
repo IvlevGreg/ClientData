@@ -2,11 +2,14 @@
 @import "mixins";
 
 .table {
-  margin: 0 auto;
   margin-bottom: 40px;
-  width: calc(100%  - 40px);
+  // width: calc(100% - 80px);
+
   max-width: 1400px;
-  min-width: 700px;
+
+  // @media (max-width: $xl) {
+  //   width: calc(100% - 40px);
+  // }
   //table-layout: fixed;
 
   &__body {
@@ -17,7 +20,7 @@
     animation-timing-function: ease-in-out;
   }
   &__row {
-    padding: 10px 0;
+    padding: 10px 9px;
 
     height: 60px;
     box-shadow: 0px -1px 0px 0px $border-table inset;
@@ -35,6 +38,13 @@
 
     @media (max-width: $lg) {
       padding: 0 9px;
+
+      &:first-child {
+        max-width: 50px;
+        white-space: nowrap; /* Текст не переносится */
+        overflow: hidden; /* Обрезаем всё за пределами блока */
+        text-overflow: ellipsis; /* Добавляем многоточие */
+      }
     }
   }
 
@@ -42,7 +52,16 @@
     padding-bottom: 8px;
     text-align: left;
     @include font(12px, 16px);
-    
+    vertical-align: bottom;
+    text-align: center;
+
+    // @media (max-width: $md) {
+    //   @include font(10px, 14px);
+    // }
+
+    &_align_left {
+      text-align: left;
+    }
   }
 
   &__col_text-sm {
@@ -59,6 +78,17 @@
   &__btn_title {
     display: inline-block;
     text-align: left;
+
+    @include font(12px, 16px);
+
+    &_no-wrap {
+      white-space: nowrap;
+    }
+
+    @media (min-width: $lg) {
+      white-space: nowrap;
+    }
+
     &:hover,
     &:hover path,
     &:hover span {
@@ -98,13 +128,15 @@
     gap: 5px 30px;
 
     @media (max-width: $md) {
-      flex-wrap: wrap;
-      gap: 5px 0px;
+      display: block;
     }
   }
 
   &__btn_modify {
-    
+    @media (max-width: $md) {
+      margin-bottom: 5px;
+    }
+
     &:hover,
     &:active,
     &:focus {
@@ -164,13 +196,13 @@
   &__btn-text {
     width: max-content;
     margin-right: 2px;
-    
   }
 
   &__date {
     margin-right: 5px;
 
     @media (max-width: $md) {
+      margin-right: 0px;
       display: block;
       width: max-content;
     }
@@ -198,7 +230,7 @@
     border: 1px solid $tc-additional;
     border-radius: 50%;
     background-color: $bc-table;
-    transition: color .3s ease, background-color .3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease;
     @include font(8px, 10px, 600);
   }
 
@@ -212,7 +244,7 @@
     &:focus {
       background-color: $tc-additional;
       border-radius: 50%;
-      
+
       color: $tc-btn;
     }
   }
