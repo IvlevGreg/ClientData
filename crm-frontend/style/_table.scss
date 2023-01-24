@@ -3,14 +3,13 @@
 
 .table {
   margin-bottom: 40px;
-  width: calc(100% - 80px);
+  // width: calc(100% - 80px);
 
   max-width: 1400px;
-  min-width: 700px;
 
-  @media (max-width: $xl) {
-    width: calc(100% - 40px);
-  }
+  // @media (max-width: $xl) {
+  //   width: calc(100% - 40px);
+  // }
   //table-layout: fixed;
 
   &__body {
@@ -21,7 +20,7 @@
     animation-timing-function: ease-in-out;
   }
   &__row {
-    padding: 10px 0;
+    padding: 10px 9px;
 
     height: 60px;
     box-shadow: 0px -1px 0px 0px $border-table inset;
@@ -53,9 +52,15 @@
     padding-bottom: 8px;
     text-align: left;
     @include font(12px, 16px);
+    vertical-align: bottom;
+    text-align: center;
 
-    @media (max-width: $md) {
-      @include font(10px, 14px);
+    // @media (max-width: $md) {
+    //   @include font(10px, 14px);
+    // }
+
+    &_align_left {
+      text-align: left;
     }
   }
 
@@ -73,6 +78,17 @@
   &__btn_title {
     display: inline-block;
     text-align: left;
+
+    @include font(12px, 16px);
+
+    &_no-wrap {
+      white-space: nowrap;
+    }
+
+    @media (min-width: $lg) {
+      white-space: nowrap;
+    }
+
     &:hover,
     &:hover path,
     &:hover span {

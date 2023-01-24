@@ -15,8 +15,13 @@
   &__table {
   }
   &__title {
-    margin-bottom: 32px;
-    padding: 0 90px;
+    margin-bottom: 28px;
+
+    @media (max-width: $md) {
+      margin-bottom: 10px;
+    }
+
+    @include font(24px, 33px, 700);
   }
   &__btn-client-add {
     display: block;
