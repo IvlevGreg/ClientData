@@ -39,82 +39,80 @@
     <section class="clients">
       <div class="container clients__container">
         <h1 class="clients__title">Клиенты</h1>
-        <div class="div">
-          <table id="table" class="clients__table table" cellspacing="0" cellpadding="0">
-            <thead>
-              <tr class="table__row table__row_title">
-                <th class="table__col table__col_title">
-                  <button class="btn table__btn table__btn_title table__btn--active txt-secondary js-sort-btn"
-                    data-sort="id">
-                    ID
-                    <svg class="table__sort-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10 6L9.295 5.295L6.5 8.085L6.5 2H5.5L5.5 8.085L2.71 5.29L2 6L6 10L10 6Z" fill="#9873FF">
-                      </path>
-                    </svg>
+        <table id="table" class="clients__table table" cellspacing="0" cellpadding="0">
+          <thead>
+            <tr class="table__row table__row_title">
+              <th class="table__col table__col_title">
+                <button class="btn table__btn table__btn_title table__btn--active txt-secondary js-sort-btn"
+                  data-sort="id">
+                  ID
+                  <svg class="table__sort-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6L9.295 5.295L6.5 8.085L6.5 2H5.5L5.5 8.085L2.71 5.29L2 6L6 10L10 6Z" fill="#9873FF">
+                    </path>
+                  </svg>
 
-                  </button>
-                </th>
-                <th class="table__col table__col_title">
-                  <button class="btn table__btn table__btn_title txt-secondary js-sort-btn" data-sort="surname">
-                    Фамилия Имя Отчество
+                </button>
+              </th>
+              <th class="table__col table__col_title">
+                <button class="btn table__btn table__btn_title table__btn_title_no-wrap txt-secondary js-sort-btn"
+                  data-sort="surname">
+                  Фамилия Имя Отчество
 
-                    <svg class="table__sort-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10 6L9.295 5.295L6.5 8.085L6.5 2H5.5L5.5 8.085L2.71 5.29L2 6L6 10L10 6Z" fill="#9873FF">
-                      </path>
-                    </svg>
-                    <span class="txt-additional table__sort-text"></span>
-                  </button>
-                </th>
-                <th class="table__col table__col_title">
-                  <button class="btn table__btn table__btn_title txt-secondary js-sort-btn" data-sort="createdAt">
-                    Дата и время создания
-                    <svg class="table__sort-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10 6L9.295 5.295L6.5 8.085L6.5 2H5.5L5.5 8.085L2.71 5.29L2 6L6 10L10 6Z" fill="#9873FF">
-                      </path>
-                    </svg>
-                  </button>
-                </th>
-                <th class="table__col table__col_title">
-                  <button class="btn table__btn table__btn_title txt-secondary js-sort-btn" data-sort="updatedAt">
-                    Последние изменения
-                    <svg class="table__sort-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10 6L9.295 5.295L6.5 8.085L6.5 2H5.5L5.5 8.085L2.71 5.29L2 6L6 10L10 6Z" fill="#9873FF">
-                      </path>
-                    </svg>
-                  </button>
-                </th>
-                <th class="table__col table__col_title txt-secondary">
-                  Контакты
-                </th>
-                <th class="table__col table__col_title txt-secondary">
-                  Действия
-                </th>
-                <!-- <th class="table__col table__col_title txt-secondary">
+                  <svg class="table__sort-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6L9.295 5.295L6.5 8.085L6.5 2H5.5L5.5 8.085L2.71 5.29L2 6L6 10L10 6Z" fill="#9873FF">
+                    </path>
+                  </svg>
+                  <span class="txt-additional table__sort-text"></span>
+                </button>
+              </th>
+              <th class="table__col table__col_title">
+                <button class="btn table__btn table__btn_title txt-secondary js-sort-btn" data-sort="createdAt">
+                  Дата и время создания <svg class="table__sort-arrow" width="12" height="12" viewBox="0 0 12 12"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6L9.295 5.295L6.5 8.085L6.5 2H5.5L5.5 8.085L2.71 5.29L2 6L6 10L10 6Z" fill="#9873FF">
+                    </path>
+                  </svg>
+                </button>
+              </th>
+              <th class="table__col table__col_title">
+                <button class="btn table__btn table__btn_title txt-secondary js-sort-btn" data-sort="updatedAt">
+                  Последние изменения
+                  <svg class="table__sort-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 6L9.295 5.295L6.5 8.085L6.5 2H5.5L5.5 8.085L2.71 5.29L2 6L6 10L10 6Z" fill="#9873FF">
+                    </path>
+                  </svg>
+                </button>
+              </th>
+              <th class="table__col table__col_title table__col_title_align_left txt-secondary">
+                Контакты
+              </th>
+              <th class="table__col table__col_title table__col_title_align_left txt-secondary">
+                Действия
+              </th>
+              <!-- <th class="table__col table__col_title txt-secondary">
               </th> -->
-              </tr> <!-- title -->
-            </thead>
+            </tr> <!-- title -->
+          </thead>
 
-            <tfoot id="table-foot" class="table__foot">
-              <tr class="table__row table__row_loading">
-                <td class="table__column table__column_loading" colspan="7">
-                  <img class="table__img-loading" src="img/clients/loading.svg" alt>
-                </td>
-              </tr>
+          <tfoot id="table-foot" class="table__foot">
+            <tr class="table__row table__row_loading">
+              <td class="table__column table__column_loading" colspan="7">
+                <img class="table__img-loading" src="img/clients/loading.svg" alt>
+              </td>
+            </tr>
 
-              <tr class="table__row table__row_error">
-                <td id="table-text-error" class="table__column table__column_error" colspan="7">
-                </td>
-              </tr>
-            </tfoot>
-            <tbody id="table-body" class="table__body">
-            </tbody>
+            <tr class="table__row table__row_error">
+              <td id="table-text-error" class="table__column table__column_error" colspan="7">
+              </td>
+            </tr>
+          </tfoot>
+          <tbody id="table-body" class="table__body">
+          </tbody>
 
-          </table>
-        </div>
+        </table>
         <button id="add-btn" class="btn btn-secondary clients__btn-client-add txt-additional">
           <svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
